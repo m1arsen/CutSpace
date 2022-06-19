@@ -1,0 +1,40 @@
+.objects {
+  padding-top: 45px;
+  padding-bottom: 80px;
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+
+    @media(max-width: 1495px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  &__text {
+    max-width: 693px;
+    padding-left: 181px;
+    flex-shrink: 0;
+    padding-right: 150px;
+
+    p+p {
+      margin-top: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+
+}

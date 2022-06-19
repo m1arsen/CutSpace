@@ -1,0 +1,74 @@
+.card-testimonial {
+  border-radius: 5px;
+  max-width: 350px;
+  overflow: hidden;
+  transition: .2s ease-in;
+
+  &:hover {
+    box-shadow: 0px 10px 52px rgba(0, 0, 0, 0.08);
+  }
+
+  &:hover &__btn-play {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &:hover &__city {
+    color: $accent-color;
+  }
+
+  &__body {
+    padding: 30px;
+
+    p:first-child {
+      margin-bottom: 23px;
+    }
+
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__city {
+    color: #58BEBF;
+    transition: .2s ease-in;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__btn-play {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    transition: .2s ease-in;
+
+    transform: translateY(25%);
+    opacity: 0;
+
+    circle {
+      fill: #fff;
+      transition: .2s linear;
+    }
+
+    path {
+      fill: $accent-color;
+      transition: .2s linear;
+    }
+
+    &:hover {
+
+      circle {
+        fill: $accent-color;
+      }
+
+      path {
+        fill: #fff;
+      }
+
+    }
+  }
+}
+

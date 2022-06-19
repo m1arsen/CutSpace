@@ -1,0 +1,49 @@
+.cta {
+  padding: 70px 0;
+
+  &__block {
+    background-color: #58BEBF;
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  &__img {
+    margin-top: 60px;
+    padding: 25px 25px 0 0;
+    background-color: #fff;
+    border-top-right-radius: 21.6px;
+  }
+
+  &__text {
+    padding-left: 95px;
+    width: 555px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+      url(./../img/cta/oval-bottom-left.svg) no-repeat bottom left -186px,
+      url(./../img/cta/oval-top-right.svg) no-repeat top right;
+
+    p {
+      width: 320px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__buttons-row {
+    margin-top: 30px;
+    display: flex;
+    column-gap: 20px;
+
+  }
+
+}

@@ -1,0 +1,20 @@
+.nav {
+  padding-top: 35px;
+  padding-bottom: 33px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}
+
+.nav-button {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 46px;
+  right: 30px;
+}
+
