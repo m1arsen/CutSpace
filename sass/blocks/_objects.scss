@@ -38,3 +38,36 @@
   }
 
 }
+
+@media(max-width: 1100px) {
+
+  .objects {
+
+    padding-top: calc(10px + (45 - 10) * (100vw - 320px) / (1100 - 320));
+    padding-bottom: calc(20px + (80 - 20) * (100vw - 320px) / (1100 - 320));
+
+    &__text {
+      max-width: calc(297px + (497 - 297) * (100vw - 320px) / (1100 - 320));
+      padding-left: calc(15px + (71 - 15) * (100vw - 320px) / (1100 - 320));
+      padding-right: calc(15px + (67 - 15) * (100vw - 320px) / (1100 - 320));
+    }
+
+  }
+
+}
+
+@media(max-width: 500px) {
+
+  .objects {
+
+    &__img {
+      display: none;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+  }
+
+}

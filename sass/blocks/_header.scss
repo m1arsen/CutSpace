@@ -36,3 +36,43 @@
   }
 }
 
+@media(max-width: 1100px) {
+
+  .header {
+
+    &__title {
+      font-size: calc(20px + (54 - 20) * (100vw - 320px) / (1100 - 320));
+    }
+
+  }
+
+}
+
+@media(max-width: 770px) {
+
+  .header {
+
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__text {
+      order: 2;
+      max-width: unset;
+    }
+
+    &__title {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    &__img {
+      margin-bottom: 10px;
+      max-width: 465px;
+      order: 1;
+    }
+
+  }
+
+}

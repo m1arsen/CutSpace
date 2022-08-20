@@ -9,5 +9,25 @@
     justify-content: space-between;
     column-gap: 35px;
   }
-  &__item {}
+}
+
+@media(max-width: 1000px) {
+
+  .benefits {
+    padding-bottom: calc(45px + (110 - 45) * (100vw - 320px)/(1000 - 320));
+
+    &__item {
+      max-width: 255px;
+    }
+
+    &__row {
+      max-width: 600px;
+      margin: 0 auto;
+
+      flex-wrap: wrap;
+      row-gap: 30px;
+      justify-content: center;
+    }
+  }
+
 }

@@ -31,3 +31,22 @@
     z-index: -1;
   }
 }
+
+@media(max-width: 1100px) {
+  .serve {
+    padding-bottom: calc(45px + (120 - 45) * (100vw - 320px)/(1100 - 320));
+  }
+}
+
+@media(max-width: 550px) {
+
+  .serve {
+
+    &__row {
+      flex-wrap: wrap;
+      row-gap: 40px;
+    }
+
+  }
+
+}

@@ -1,6 +1,6 @@
 html, body {
   font-family: 'Poppins', sans-serif;
-  font-style: 16px;
+  font-size: 16px;
   line-height: 1.6875;
   color: $black-color;
 }
@@ -21,4 +21,10 @@ html, body {
 
 .none {
   display: none;
+}
+
+@media(max-width: 1100px) {
+  p {
+    font-size: calc(14px + (16 - 14) * (100vw - 320px) / (1100 - 320));
+  }
 }

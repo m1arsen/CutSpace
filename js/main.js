@@ -12,15 +12,35 @@ input.addEventListener('blur', function () {
 })
 
 // Навигация
+(function(){
+  const navBar = document.querySelector('.navigation');
+  const navBtn = document.querySelector('.nav__btn');
+  const navLink = document.querySelectorAll('.navigation__link');
 
-const nav = document.querySelector('#navigation');
-const navBtn = document.querySelector('#nav-btn');
-const navBtnImg = document.querySelector('#nav-btn-img');
+  navBtn.addEventListener("click", () => {
 
-navBtn.onclick = () => {
-  if (nav.classList.toggle('open')) {
-    navBtnImg.src = "./img/icons/nav-close.svg";
-  } else {
-    navBtnImg.src = "./img/icons/nav-open.svg";
+    if (! navBar.classList.contains('open')) {
+      navBar.classList.add('open');
+    } else {
+      navBar.classList.remove('open');
+    }
+  });
+
+  for(let i = 0; i < navLink.length; i++) {
+    const currentNavLink = navLink[i];
+
+    currentNavLink.addEventListener("click", () => {
+
+
+        if(! currentNavLink.classList.contains('active')) {
+          navLink.forEach(function() {
+            for(let i = 0; i < navLink.length; i++) {
+              navLink[i].classList.remove('active');
+            };
+            currentNavLink.classList.add('active');
+          });
+        }
+    });
   }
-}
+
+}());

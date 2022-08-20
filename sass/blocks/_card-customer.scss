@@ -41,3 +41,13 @@
     color: #F78434;
   }
 }
+
+
+@media(max-width: 1100px) {
+
+  .card-customer {
+    padding:  calc(20px + (40 - 20) * (100vw - 550px) / (1100 - 550))
+              calc(44px + (88 - 44) * (100vw - 550px) / (1100 - 550));
+  }
+
+}
