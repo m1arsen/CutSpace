@@ -1,6 +1,5 @@
 .nav {
-  padding-top: 35px;
-  padding-bottom: 33px;
+  padding: 35px 0;
 
   &__row {
     display: flex;
@@ -8,13 +7,59 @@
     align-items: center;
   }
 
+  &__btn {
+    display: none;
+    position: relative;
+
+    &-container {
+      width: 37px;
+      height: 18.5px;
+      position: relative;
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
+      cursor: pointer;
+
+      span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: $black-color;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .3s ease-in;
+
+        &:nth-child(1) {
+          transform-origin: left center;
+          top: 0px;
+        }
+
+        &:nth-child(2) {
+          transform-origin: left center;
+          top: 9px;
+        }
+
+        &:nth-child(3) {
+          transform-origin: left center;
+          top: 18.5px;
+        }
+      }
+
+      
+    }
+  }
 }
 
-.nav-button {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  top: 46px;
-  right: 30px;
-}
+@media(max-width: 770px) {
 
+  .nav {
+
+    &__btn {
+      display: block;
+    }
+
+  }
+
+}

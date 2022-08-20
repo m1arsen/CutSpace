@@ -1,11 +1,10 @@
 .button {
   display: inline-block;
-  height: 58px;
-  padding: 0 37px;
+  padding: 18px 40px;
   border-radius: 29px;
   background-color: $accent-color;
 
-  line-height: 58px;
+  line-height: 1.5;
   font-weight: 700;
   color: #fff;
   transition: background-color .2s ease-in;
@@ -24,7 +23,6 @@
   }
 
   &--play {
-    padding-left: 50px;
     position: relative;
 
     &::before {
@@ -44,5 +42,14 @@
   }
 }
 
+@media(max-width: 770px) {
+
+  .button {
+    padding:  calc(14px + (18 - 14) * (100vw - 320px) / (770 - 320))
+              calc(24px + (40 - 24) * (100vw - 320px) / (770 - 320));
+    font-size: calc(14px + (16 - 14) * (100vw - 320px) / (770 - 320));
+  }
+
+}
 
 

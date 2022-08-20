@@ -15,7 +15,7 @@
   &__row {
     display: flex;
     justify-content: space-between;
-    column-gap: 30px;
+    gap: 30px;
     position: relative;
 
     &:after {
@@ -31,3 +31,43 @@
   }
 }
 
+@media(max-width: 1250px) {
+
+  .testimonials {
+
+    &__row {
+      gap: calc(15px + (30 - 15) * (100vw - 770px) / (1250 - 770));
+
+      &::after {
+        display: none;
+      }
+
+    }
+
+    &__heading {
+      margin-bottom: calc(30px + (60 - 30) * (100vw - 320px) / (1250 - 320));
+    }
+
+  }
+
+}
+
+@media(max-width: 770px) {
+
+  .testimonials {
+    padding: 0;
+
+    &__row {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &__heading {
+      flex-wrap: wrap;
+      row-gap: 10px;
+    }
+
+  }
+
+}

@@ -1,5 +1,5 @@
 .card-testimonial {
-  border-radius: 5px;
+  border-radius: 10px;
   max-width: 350px;
   overflow: hidden;
   transition: .2s ease-in;
@@ -72,3 +72,22 @@
   }
 }
 
+
+@media(max-width: 1250px) {
+
+  .card-testimonial {
+    &__body {
+      padding: calc(10px + (30 - 10) * (100vw - 770px) / (1250 - 770));
+    }
+  }
+
+}
+
+@media(max-width: 770px) {
+
+  .card-testimonial {
+    &__body {
+      padding: 10px;
+    }
+  }
+}

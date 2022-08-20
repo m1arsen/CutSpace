@@ -1,9 +1,18 @@
 .contacts {
-  padding-top: 200px;
-  padding-bottom: 55px;
   background: url('./../img/contacts/contacts-bg.svg')no-repeat;
   background-size: cover;
+  overflow: hidden;
   position: relative;
+
+  &__container {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 170px;
+  }
+
+  &__img {
+    z-index: 10;
+  }
 
   &__title {
     margin-bottom: 15px;
@@ -15,6 +24,7 @@
   }
 
   &__info {
+    padding-bottom: 55px;
     max-width: 360px;
     color: #fff;
   }
@@ -42,17 +52,40 @@
     left: 45%;
   }
 
-  &::after {
-    content: "";
-    display: block;
-    width: 478px;
-    height: 547px;
-    background-image: url('./../img/contacts/girl.png');
-    background-size: initial;
+}
 
-    position: absolute;
-    bottom: 0;
-    left: 50%;
+@media(max-width: 1100px) {
+
+  .contacts {
+
+    &__container {
+      column-gap: calc(0px + (170 - 0) * (100vw - 770px)/(1100 - 770));
+    }
+
+  }
+
+}
+
+@media(max-width: 770px) {
+
+  .contacts {
+
+    &__info {
+      padding-top: 150px;
+    }
+
+  }
+
+}
+
+@media(max-width: 550px) {
+
+  .contacts {
+
+    &__img {
+      display: none;
+    }
+
   }
 
 }

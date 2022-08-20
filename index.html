@@ -28,15 +28,19 @@
         </div>
         <div id="navigation" class="navigation">
           <ul class="navigation__list">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Find space</a></li>
-            <li><a href="#">Share space</a></li>
-            <li><a href="#">Promote space</a></li>
+            <li><a href="#" class="navigation__link">Home</a></li>
+            <li><a href="#" class="navigation__link">About us</a></li>
+            <li><a href="#" class="navigation__link">Find space</a></li>
+            <li><a href="#" class="navigation__link">Share space</a></li>
+            <li><a href="#" class="navigation__link">Promote space</a></li>
           </ul>
-          <button id="nav-btn" class="nav-button">
-            <img id="nav-btn-img" src="./img/icons/nav-open.svg" alt="Nav button">
-          </button>
+          <div class="nav__btn">
+            <div class="nav__btn-container">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -54,6 +58,7 @@
               <button class="form__button button">Subscribe</button>
             </label>
           </form>
+          <button class="form__button-mobile button">Subscribe</button>
         </div>
         <div class="header__img">
           <img src="./img/header/header-bg.jpg" alt="real estate space">
@@ -62,7 +67,7 @@
     </div>
   </header>
 
-  <section class="clinets">
+  <section class="clients">
     <div class="container">
       <div class="clients__row">
         <img src="./img/clients/01.svg" alt="Logo">
@@ -350,13 +355,18 @@
   </section>
 
   <section class="contacts">
-    <div class="container">
+    <div class="contacts__container container">
+
       <div class="contacts__info">
         <div class="contacts__title title">Get experience from the expert</div>
         <div class="contacts__text">
           <p>Quid ex eo ortum, tam inportuno tamque crudeli; sin, ut aliquid ex</p>
         </div>
         <a href="#!" class="button button--white">Contact Us</a>
+      </div>
+
+      <div class="contacts__img">
+        <img src="./img/contacts/girl.png" alt="Girl">
       </div>
     </div>
   </section>
